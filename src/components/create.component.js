@@ -26,9 +26,9 @@ function submitHendler(event){
             type: this.$el.type.value,
             ...this.form.value()
         }
+
+        this.form.clear()
         console.log(formData)
-    }else{
-        console.warn('form is invalid')
     }
 
 
