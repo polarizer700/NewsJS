@@ -4,6 +4,9 @@ import {CreateComponent} from "./components/create.component";
 import {FavoriteComponent} from "./components/favorite.component";
 import {PostsComponent} from "./components/posts.component";
 import {LoaderComponent} from "./components/loader.component";
+import {InternetComponent} from "./components/internet.component";
+
+
 
 new HeaderComponent('header');
 
@@ -13,6 +16,7 @@ const loader = new LoaderComponent('loader')
 const posts = new PostsComponent('posts',{loader});
 const create = new CreateComponent('create');
 const favorite = new FavoriteComponent('favorite');
+const internet = new InternetComponent('internet',{loader});
 
 navigation.registerTabs([
     {
@@ -26,5 +30,9 @@ navigation.registerTabs([
     {
         name : 'favorite',
         component : favorite
+    },
+    {
+        name : 'internet',
+        component : internet
     },
 ])
