@@ -15,7 +15,7 @@ const loader = new LoaderComponent('loader')
 
 const posts = new PostsComponent('posts',{loader});
 const create = new CreateComponent('create');
-const favorite = new FavoriteComponent('favorite');
+const favorite = new FavoriteComponent('favorite',{loader});
 const internet = new InternetComponent('internet',{loader});
 
 navigation.registerTabs([
@@ -30,9 +30,5 @@ navigation.registerTabs([
     {
         name : 'favorite',
         component : favorite
-    },
-    {
-        name : 'internet',
-        component : internet
     },
 ])
